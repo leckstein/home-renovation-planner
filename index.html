@@ -52,12 +52,13 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 8px;
 </section>
 
 <section class="panel">
-<h2>Bathroom tile measurements</h2>
+<h2>Bathroom tile measurements — confirmed wall geometry</h2>
 <div class="two">
-<div class="callout"><b>Ensuite</b><br>Shower: 1900 × 950 × 2450 high<br>Vanity wall: 2750 × 1200 high<br>Cupboard wall: 1710 × 1200 high<br><span class="small">Working wall-tile quantity remains provisional until we confirm exactly which shower sides are solid tiled walls.</span></div>
-<div class="callout"><b>Shared bathroom</b><br>Shower: 960 × 1200 × 2300 high; one shower side is glass<br>Vanity wall: 3050 × 1200 high<br>Back bath wall: 1660 × 1200 high<br>Opposite vanity: 4250 × 1200 high<br><span class="small">Shower floor: 1.152 m² net. Final shower-floor product still to be chosen.</span></div>
+<div class="callout"><b>Ensuite</b><br>Shower: 1900 × 950 × 2450 high; <b>3 tiled walls = 2 × 950 + 1 × 1900</b><br>Shower walls: <b>9.31 m²</b><br>Vanity wall: 2750 × one full Nyra tile course ≈ 1200 high = <b>3.30 m²</b><br>Cupboard wall: 1710 × one full tile course ≈ 1200 high = <b>2.05 m²</b><br><b>Ensuite total: 14.66 m² net</b></div>
+<div class="callout"><b>Shared bathroom</b><br>Shower: 960 × 1200 × 2300 high; <b>2 tiled walls = 1 × 960 + 1 × 1200</b>, other side glass<br>Shower walls: <b>4.97 m²</b><br>Vanity wall: 3050 × one full tile course = <b>3.66 m²</b><br>Back bath wall: 1660 × one full tile course = <b>1.99 m²</b><br>Opposite vanity: 4250 × one full tile course = <b>5.10 m²</b><br><b>Shared total: 15.72 m² net</b></div>
 </div>
-<div class="callout warn" style="margin-top:12px"><b>Do not buy the final Nyra Hay quantity yet.</b> The non-shower wall dimensions are captured, but the exact solid-wall configuration in both showers and tile layout/waste need to be locked before converting to boxes.</div>
+<div class="callout" style="margin-top:12px"><b>Nyra Hay wall tile order:</b> 30.38 m² net. We are deliberately not deducting doors/openings, so those saved pieces become additional usable offcuts, and we still add 10% waste. Working order is <b>12 boxes = 34.56 m²</b> (2 tiles / 2.88 m² per box) at the quoted R799/m² = <b>R27,613.44</b>.</div>
+<div class="callout warn" style="margin-top:12px"><b>Tile set-out:</b> outside the showers, use <b>one full Nyra 1200 × 1200 tile course</b> rather than cutting to an arbitrary half-wall height. Let the actual tile + grout module set the finished top line. In the showers, tile to ceiling and use a balanced set-out so the ensuite does not end with a narrow ~50 mm strip at the ceiling.</div>
 </section>
 
 <section class="panel">
@@ -67,7 +68,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 8px;
 <div><label>Show status</label><select id="statusFilter"><option value="all">All statuses</option><option value="buy">Buy / secure now</option><option value="quoted">Already in contractor quote</option><option value="pending">Pending confirmation</option><option value="future">Future stage</option></select></div>
 </div>
 <div class="grid">
-<article class="card"><span class="badge">Owner — buy/secure now</span><div class="price" id="ownerNow">—</div><p class="small">Confirmed owner-supplied items plus full selected LVT batch. Excludes bath and final tile quantity.</p></article>
+<article class="card"><span class="badge">Owner — buy/secure now</span><div class="price" id="ownerNow">—</div><p class="small">Confirmed owner-supplied items plus full selected LVT batch and 12 boxes of Nyra Hay wall tile. Excludes bath and shower-floor tile.</p></article>
 <article class="card"><span class="badge">Contractor quoted</span><div class="price">R166,375.27</div><p class="small">Existing contractor quotation. 60% deposit = R99,825.16; 40% balance = R66,550.11.</p></article>
 <article class="card"><span class="badge">Later flooring</span><div class="price" id="futureFloor">—</div><p class="small">Future adhesive + labour for the remaining floor area only; LVT itself assumed already secured.</p></article>
 </div>
@@ -78,7 +79,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 8px;
 <h2>Items intentionally on hold</h2>
 <table><tbody>
 <tr><td><b>Bath</b></td><td>Wait for contractor to confirm whether the shared-bath wall/opening can accommodate Athena 1700 × 750. No freestanding option.</td></tr>
-<tr><td><b>Nyra Hay final quantity</b></td><td>Wait until exact shower solid-wall arrangement and final tile layout are confirmed.</td></tr>
+<tr><td><b>Nyra Hay wall tile</b></td><td><b>Confirmed for purchase:</b> 12 boxes / 34.56 m². Use one full 1200 mm tile course on half-height walls; shower walls tile to ceiling with balanced cuts.</td></tr>
 <tr><td><b>Shower floor tile</b></td><td>Still comparing original pebble mosaic vs a smaller warm-beige Italtile porcelain close to Nyra Hay.</td></tr>
 <tr><td><b>Shower glass</b></td><td>Measure after tile build-up / finished opening.</td></tr>
 <tr><td><b>Vanities</b></td><td>Working targets now 1400 mm ensuite and 1100 mm or under shared. Cabinetmaker to site-measure before manufacture.</td></tr>
@@ -91,7 +92,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 8px;
 const $=id=>document.getElementById(id), money=n=>'R'+Number(n||0).toLocaleString('en-ZA',{minimumFractionDigits:2,maximumFractionDigits:2});
 const KEY='ruePlannerV12', ids=['area','stage1','waste','floorPrice','labour','adhesive','ensuiteVanity','sharedVanity'];
 const q={doorFrames:8091.90,doors:10530,lintels:1215,locks:4041.90,hinges:2899.80,doorInstall:15000,tilingLabour:9000,floorLabour:18060,window:10265,demo:5450,extractors:1347.30,wall:4850,cupboards:68450.37,plumber:4250,waterproof:1924,sundries:1000};
-const owner={basinMixers:3599.70,showers:7999.80,bathMixer:2399.90,basins:6570,wastes:600,traps:509.70,drains:1799.80,accessories:2209.30,mirrors:15000,glass:6500,vanities:30000};
+const owner={basinMixers:3599.70,showers:7999.80,bathMixer:2399.90,basins:6570,wastes:600,traps:509.70,drains:1799.80,accessories:2209.30,mirrors:15000,glass:6500,vanities:30000,nyraWall:27613.44};
 function state(){let o={};ids.forEach(i=>o[i]=$(i).value);return o}function save(show=false){localStorage.setItem(KEY,JSON.stringify(state()));if(show){$('status').textContent='Saved';setTimeout(()=>$('status').textContent='Auto-save on',1000)}}
 function load(){try{let s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)Object.entries(s).forEach(([k,v])=>{if($(k))$(k).value=v})}catch(e){}}
 function row(name,role,status,cost,note=''){return `<tr data-role="${role}" data-status="${status}"><td>${name}</td><td class="${role}">${role==='owner'?'Owner':'Contractor'}</td><td>${status==='buy'?'BUY / SECURE NOW':status==='quoted'?'QUOTED':status==='pending'?'PENDING':'FUTURE'}</td><td>${note}</td><td class="money">${cost==null?'TBD':money(cost)}</td></tr>`}
@@ -101,7 +102,7 @@ function calc(){
  let area=+$('area').value||0,stage1=+$('stage1').value||0,w=+$('waste').value||0,fp=+$('floorPrice').value||0,lab=+$('labour').value||0,adh=+$('adhesive').value||0;
  let qty=area*(1+w),boxes=Math.ceil(qty/4.46),boxQty=boxes*4.46,floorCost=boxQty*fp,futureArea=Math.max(0,area-stage1),stage1Adh=stage1*adh,futureAdh=futureArea*adh,futureLab=futureArea*lab;
  $('floorBatch').textContent=money(floorCost);$('floorBoxes').textContent=`${boxes} boxes = ${boxQty.toFixed(2)} m² purchased (working target ${qty.toFixed(1)} m²).`;
- let confirmedOwner=owner.basinMixers+owner.showers+owner.bathMixer+owner.basins+owner.wastes+owner.traps+owner.drains+owner.accessories+floorCost+stage1Adh;
+ let confirmedOwner=owner.basinMixers+owner.showers+owner.bathMixer+owner.basins+owner.wastes+owner.traps+owner.drains+owner.accessories+owner.nyraWall+floorCost+stage1Adh;
  $('ownerNow').textContent=money(confirmedOwner);$('futureFloor').textContent=money(futureAdh+futureLab);
  let s0rows=[row('deZIGN 250 Blond Oak — full same-batch quantity','owner','buy',floorCost,`${boxes} boxes / ${boxQty.toFixed(2)} m² at ${money(fp)}/m²`),row('Ensuite aluminium window','contractor','quoted',q.window,'Existing quote')];
  let s0=floorCost+q.window;
@@ -109,8 +110,8 @@ function calc(){
  let s1=q.demo+q.wall+q.extractors+q.plumber+q.waterproof+q.sundries+owner.basins+owner.basinMixers+owner.showers+owner.bathMixer;
  let s2rows=[row('6 door frames','contractor','quoted',q.doorFrames),row('6 doors','contractor','quoted',q.doors),row('6 lintels','contractor','quoted',q.lintels),row('6 lock/handle sets','contractor','quoted',q.locks),row('12 hinges','contractor','quoted',q.hinges),row('Door/frame installation','contractor','quoted',q.doorInstall)];
  let s2=q.doorFrames+q.doors+q.lintels+q.locks+q.hinges+q.doorInstall;
- let s3rows=[row('Bathroom tiling labour','contractor','quoted',q.tilingLabour,'Revise quote wording to shower full-height + other walls 1200 high'),row('Nyra Hay wall tile','owner','pending',null,'Final boxes after shower-wall configuration/layout'),row('Shower floor finish','owner','pending',null,'Pebble vs closest warm-beige small-format Italtile porcelain'),row('Tile adhesive / grout / trims / silicone','owner','pending',null,'Confirm owner vs contractor supply')];
- let s3=q.tilingLabour;
+ let s3rows=[row('Bathroom tiling labour','contractor','quoted',q.tilingLabour,'Shower walls full-height; other listed walls one full Nyra tile course high'),row('Nyra Hay wall tile — 12 boxes / 34.56 m²','owner','buy',owner.nyraWall,'30.38 m² net; openings not deducted; 10% waste retained; R799/m² quoted'),row('Shower floor finish','owner','pending',null,'Pebble vs closest warm-beige small-format Italtile porcelain'),row('Tile adhesive / grout / trims / silicone','owner','pending',null,'Confirm owner vs contractor supply')];
+ let s3=q.tilingLabour+owner.nyraWall;
  let s4rows=[row('Quoted white melamine cupboards','contractor','quoted',q.cupboards),row('Ensuite floating vanity','owner','pending',null,$('ensuiteVanity').value+' working target; site measure'),row('Shared floating vanity','owner','pending',null,$('sharedVanity').value+' working target; site measure')];
  let s4=q.cupboards;
  let s5rows=[row('3 LED mirrors','owner','pending',owner.mirrors,'Allowance until exact models selected'),row('Shower glass','owner','pending',owner.glass,'Measure after tiling'),row('Stainless accessories','owner','buy',owner.accessories,'Ferrara-compatible brushed/satin stainless direction'),row('3 slotted wastes','owner','buy',owner.wastes,'Laufen basins have overflow'),row('3 space-saving bottle traps','owner','buy',owner.traps),row('2 stainless shower drains','owner','buy',owner.drains,'Final size/outlet to be confirmed before purchase')];
